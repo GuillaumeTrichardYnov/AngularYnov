@@ -178,3 +178,7 @@ input#search-bar{
   top: -62px;
   cursor: pointer;
 }
+
+.width{
+  width: 100%;
+}
