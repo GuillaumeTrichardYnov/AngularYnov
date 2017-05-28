@@ -14,6 +14,7 @@ export function jsonToFilm(input) {
   return film;
 }
 
+
 export function jsonArrayToFilmArray(input: Array<any>) {
   let films: Film[] = [];
   for (let entry of input)
