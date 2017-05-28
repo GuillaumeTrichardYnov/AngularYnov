@@ -1,0 +1,45 @@
+.active{
+  font-size: 20px;
+  background-color: #D32F2F;
+  color: white!important;
+}
+a{
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+}
+.button{
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:5px;
+  background: #fff;
+  border: 2px solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+}
+
+.all
+{
+  text-align: center;
+}

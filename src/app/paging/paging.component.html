@@ -1,0 +1,10 @@
+<div class="all">
+	<button *ngIf="1 != currentPage" (click)="prev()" class="button">prev</button>
+	<ul>
+		<li *ngFor="let item of allPages">
+	    <a *ngIf="item == currentPage" (click)="goToPage(item)" class="active">{{item}}</a>
+	    <a *ngIf="item != currentPage" (click)="goToPage(item)" >{{item}}</a>
+	  </li>
+	</ul>
+	<button *ngIf="lastPage != currentPage" (click)="next()" class="button">next</button>
+</div>

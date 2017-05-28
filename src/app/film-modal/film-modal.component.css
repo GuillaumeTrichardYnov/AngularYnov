@@ -1,0 +1,107 @@
+/* Modal */
+
+.modalDialog {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  pointer-events: auto;
+}
+
+.modalDialog > dialog {
+  position: fixed;
+  top: 25%;
+  padding: 25px 25px 40px 25px;
+  margin: 0 auto;
+  width: 65%;
+  max-width: 890px;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #ffffff;
+  display: block;
+  border: none;
+  transform: scale(1.15);
+  will-change: transform, opacity;
+}
+
+.modalDialog:target > dialog {
+  pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
+.modalDialog > dialog h1 {
+  margin: 0.2em 0 0.4em 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.5em;
+  color: #244276;
+}
+
+.modalDialog > dialog p {
+  font-size: 0.875em;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+  color: #686563;
+}
+
+.charactersDiv
+{
+  max-height: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 50%;
+  margin-left: 25%;
+  font-size: 15px;
+  max-height: 200px;
+}
+
+.characters
+{
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  /*padding: 5px;*/
+  background-color: black;
+  margin: 4px;
+  color: white;
+  display: block;
+
+}
+.characters :hover
+{
+  background-color: darkgrey;
+
+}
+
+a{
+  padding: 5px;
+  display: block;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.modalDialog > dialog > .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: black;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.modalDialog > dialog > .close:hover {
+  color: #78cdee;
+}
+
+
+/* /END Modal */

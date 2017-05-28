@@ -1,0 +1,28 @@
+<div class="container">
+	<br>
+	<input type="text" id="search-bar" [(ngModel)]="keyWord" placeholder="Recherchez un personnage">
+	 <img (click)="valider()" class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+
+	 <error *ngIf="error" [text]="errorText"></error>
+	<div *ngFor="let item of listPersonnages">
+		<a [routerLink]="['/detail', item.url]">
+			<figure class="snip0051">
+				<img src="assets/images/personnages/{{item.id}}.png" onError="this.src='http://www.freevectors.net/files/large/SithAvatar.jpg';" alt="sample1"/>
+
+				<div class="icons">
+					<a href="#"><i class="ion-ios-home-outline"></i></a>
+					<a href="#"><i class="ion-ios-email-outline"></i></a>
+					<a href="#"><i class="ion-ios-telephone-outline"></i></a>
+				</div>
+				<figcaption>
+					<h2><span>{{item.name}}</span></h2>
+					<p>{{item.birth_year}} <br>{{item.gender}}</p>
+				</figcaption>
+			</figure>
+		</a>
+	</div>
+
+</div>
+
+<paging [currentPage]="currentPage" [lastPage]="lastPage" (change)="handleUserUpdated($event)"></paging>
+<loader [loading]="loading"></loader>

@@ -1,0 +1,31 @@
+<div class="container text-center">
+  <img class="imgCenter" src="assets/images/personnages/{{personnage.id}}.png" onError="this.src='http://www.freevectors.net/files/large/SithAvatar.jpg';" alt="sample1"/>
+  <h2>{{personnage.name | nullOrEmpty}}</h2>
+  <div>
+    <div class="inputDetail"><span class="firstText">Date de naissance : </span>{{personnage.birth_year | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Sexe : </span>{{personnage.gender | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Couleur des yeux : </span>{{personnage.eye_color | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Couleur des cheveux : </span>{{personnage.hair_color | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Planete : </span>{{personnage.homeworld | getName | async}}</div>
+    <div class="inputDetail"><span class="firstText">Taille : </span>{{personnage.height | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Poid : </span>{{personnage.mass | nullOrEmpty}}</div>
+    <div class="inputDetail"><span class="firstText">Couleur : </span>{{personnage.skin_color | nullOrEmpty}}</div>
+  </div>
+  <br><br>
+  <div class="films">
+
+    <span class="item" *ngFor="let item of listFilm">
+      <img src="assets/images/films/{{item.id}}.png" onError="this.src='http://www.scienceballade.com/wp-content/uploads/2016/01/StarWarsLogo.jpeg';" alt="sample1"/>
+       <div class="overlay">
+         <h3>{{item.title}}</h3>
+         <button id="button" (click)="filmDetail(item)">Voir +</button>
+       </div>
+
+
+   </span>
+
+  </div>
+</div>
+<film-modal *ngIf="displayFilmDetail" [film]="film" (close)="closeModal()"></film-modal>
+
+<loader [loading]="loading"></loader>
